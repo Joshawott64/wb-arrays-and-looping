@@ -4,6 +4,7 @@
 
 function first(inputArray) {
   //Code here
+  let firstItem = inputArray[0]
   return firstItem;
 }
 
@@ -13,6 +14,7 @@ function first(inputArray) {
 
 function getLength(inputArray) {
   //Code here
+  let arrayLength = inputArray.length
   return arrayLength;
 }
 
@@ -22,6 +24,7 @@ function getLength(inputArray) {
 
 function last(inputArray) {
   //Code here
+  let lastItem = inputArray.pop()
   return lastItem;
 }
 
@@ -31,6 +34,7 @@ function last(inputArray) {
 
 function addItem(inputArray, num) {
   //Code here
+  inputArray.push(num)
   return inputArray;
 }
 
@@ -40,6 +44,7 @@ function addItem(inputArray, num) {
 
 function removeLast(inputArray) {
   //Code here
+  inputArray.pop()
   return inputArray;
 }
 
@@ -49,6 +54,7 @@ function removeLast(inputArray) {
 
 function removeFirst(inputArray) {
   //Code here
+  inputArray.shift()
   return inputArray;
 }
 
@@ -59,8 +65,10 @@ function removeFirst(inputArray) {
 
 function replaceFirstAndLast(inputArray) {
   //Code here
+  inputArray.splice(0, 1, 42)
+  inputArray.splice(inputArray.length - 1, 1, 42)
   return inputArray;
-}
+} 
 
 //////////////////PROBLEM 8////////////////////
 
@@ -73,7 +81,10 @@ function replaceFirstAndLast(inputArray) {
 function addTen(inputArray) {
   let newArr = [];
   // Code here
-
+  for (let i = 0; i < inputArray.length; i++) {
+    inputArray[i] += 10
+    newArr.push(inputArray[i])
+  }
   return newArr;
 }
 
@@ -84,7 +95,9 @@ function addTen(inputArray) {
 function count31() {
   let numbers = [];
   // Code here
-
+  for (let i = 0; i <= 31; i++) {
+    numbers[i] = i
+  }
   return numbers;
 }
 
@@ -95,7 +108,9 @@ function count31() {
 function countEvens() {
   let numbers = [];
   // Code here
-
+  for (let i = 0; i <= 20; i += 2) {
+    numbers.push(i)
+  }
   return numbers;
 }
 
@@ -106,7 +121,9 @@ function countEvens() {
 function countdown() {
   let numbers = [];
   // Code here
-
+  for (i = 10; i >= 1; i--) {
+    numbers.push(i)
+  }
   return numbers;
 }
 
@@ -121,7 +138,9 @@ function countdown() {
 function backwards(inputArray) {
   let newArray = [];
   // Code here
-
+  for (i = 0; i < inputArray.length; i++) {
+    newArray.unshift(inputArray[i])
+  }
   return newArray;
 }
 
@@ -135,6 +154,11 @@ function backwards(inputArray) {
 
 function findInArray(inputArray, value) {
   // Code here
+  if (inputArray.includes(value)) {
+    valueFound = true
+  } else {
+    valueFound = false
+  }
   return valueFound;
 }
 
@@ -149,6 +173,12 @@ function findInArray(inputArray, value) {
 function stopAtNegative(inputArray) {
   let newArray = [];
   // Code here
-
+  for (let i = 0; i < inputArray.length; i++) {
+    if (inputArray[i] > 0) {
+      newArray.push(inputArray[i])
+    } else {
+      break
+    }
+  }
   return newArray;
 }
