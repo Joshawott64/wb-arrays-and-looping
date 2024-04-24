@@ -173,7 +173,7 @@ function findInArray(inputArray, value) {
 function stopAtNegative(inputArray) {
   let newArray = [];
   // Code here
-  for (let i = 0; i < inputArray.length; i++) {
+  for (let i = 0; i < inputArray.length; i += 1) {
     if (inputArray[i] > 0) {
       newArray.push(inputArray[i])
     } else {
